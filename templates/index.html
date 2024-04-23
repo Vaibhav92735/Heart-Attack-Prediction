@@ -1,283 +1,214 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heart Attack Risk Prediction</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      background-image: url('https://www.verywellhealth.com/thmb/91EjD7irzkiCCw13MooK0KfzLp0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/heart-attack-GettyImages-513089007-57572c2a5f9b5892e81ad193.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    input[type="text"] {
-      padding: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button[type="submit"] {
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Heart Attack Risk Prediction</h1>
-    <form method="post" action="/predict">
-      <div>
-        <label for="age">Age:</label>
-        <input type="text" id="age" name="age">
-      </div>
-      <div>
-        <label for="sex">Sex (0 for female, 1 for male):</label>
-        <input type="text" id="sex" name="sex">
-      </div>
-      <div>
-        <label for="cholesterol">Cholesterol:</label>
-        <input type="text" id="cholesterol" name="cholesterol">
-      </div>
-      <div>
-        <label for="heart_rate">Heart Rate:</label>
-        <input type="text" id="heart_rate" name="heart_rate">
-      </div>
-      <div>
-        <label for="high_bp">High Blood Pressure (Systolic):</label>
-        <input type="text" id="high_bp" name="high_bp">
-      </div>
-      <div>
-        <label for="low_bp">Low Blood Pressure (Diastolic):</label>
-        <input type="text" id="low_bp" name="low_bp">
-      </div>
-      <div>
-        <label for="diabetes">Diabetes (0 for no, 1 for yes):</label>
-        <input type="text" id="diabetes" name="diabetes">
-      </div>
-      <div>
-        <label for="smoking">Smoking (0 for no, 1 for yes):</label>
-        <input type="text" id="smoking" name="smoking">
-      </div>
-      <div>
-        <label for="obesity">Obesity (BMI):</label>
-        <input type="text" id="obesity" name="obesity">
-      </div>
-      <div>
-        <label for="alc">Alcohol Consumption (0 for no, 1 for yes):</label>
-        <input type="text" id="alc" name="alc">
-      </div>
-      <div>
-        <label for="exc">Exercise Hours Per Week:</label>
-        <input type="text" id="exc" name="exc">
-      </div>
-      <div>
-        <label for="pre">Previous Heart Problems (0 for no, 1 for yes):</label>
-        <input type="text" id="pre" name="pre">
-      </div>
-      <div>
-        <label for="bmi">BMI:</label>
-        <input type="text" id="bmi" name="bmi">
-      </div>
-      <div>
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country">
-      </div>
-      <div>
-        <label for="ayt">Average Yearly Temperature (Celsius):</label>
-        <input type="text" id="ayt" name="ayt">
-      </div>
-      <button type="submit">Predict</button>
-    </form>
-  </div>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heart Attack Risk Prediction</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      background-image: url('https://www.verywellhealth.com/thmb/91EjD7irzkiCCw13MooK0KfzLp0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/heart-attack-GettyImages-513089007-57572c2a5f9b5892e81ad193.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    label {
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    input[type="text"] {
-      padding: 8px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button[type="submit"] {
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/styles.css')}}">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div class="container">
     <h1>Heart Attack Risk Prediction</h1>
-    <form method="post" action="/predict">
-      <div>
-        <label for="age">Age:</label>
-        <input type="text" id="age" name="age">
-      </div>
-      <div>
-        <label for="sex">Sex (0 for female, 1 for male):</label>
-        <input type="text" id="sex" name="sex">
-      </div>
+    <div class="Overview">
+      <h2>Heart Attack</h2>
+      <p>A heart attack occurs when an artery that sends blood and oxygen to the heart is blocked. Fatty,
+        cholesterol-containing deposits build up over time, forming plaques in the heart's arteries. If a plaque
+        ruptures, a blood clot can form. The clot can block arteries, causing a heart attack. During a heart
+        attack, a lack of blood flow causes the tissue in the heart muscle to die.
+        A heart attack is also called a myocardial infarction.</p>
+    </div>
+
+    <div class="image">
+      <img
+        src="https://www.verywellhealth.com/thmb/91EjD7irzkiCCw13MooK0KfzLp0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/heart-attack-GettyImages-513089007-57572c2a5f9b5892e81ad193.jpg" />
+    </div>
+    <div class="Symptoms">
+      <h2>Symptoms</h2>
+      <p>Symptoms of a heart attack vary. Some people have mild symptoms. Others have severe symptoms. Some
+        people have no symptoms.
+        Common heart attack symptoms include:</p>
+      <ul>
+        <li>Chest pain that may feel like pressure, tightness, pain, squeezing or aching</li>
+        <li>Pain or discomfort that spreads to the shoulder, arm, back, neck, jaw, teeth or sometimes the upper belly
+        </li>
+        <li>Cold Sweat</li>
+        <li>Fatigue</li>
+        <li>Heartburn or indigestion</li>
+        <li>Lightheadness or sudden dizziness</li>
+        <li>Nausea</li>
+        <li>Shortness of breath</li>
+      </ul>
+    </div>
+    <div class="Causes">
+      <h2>Causes</h2>
+      <p>Leading risk factors for heart disease and stroke are:</p>
+      <ul>
+        <li>High Blood Pressure</li>
+        <li>High Low-density Lipoprotein (LDL) Cholesterol</li>
+        <li>Diabetes</li>
+        <li>Smoking</li>
+        <li>Secondhand Smoke Exposure</li>
+        <li>Obesity</li>
+        <li>Unhealthy Diet</li>
+        <li>Physical Inactivity</li>
+      </ul>
+    </div>
+    <div class="Causes">
+      <h2>Preventive Measures:</h2>
+      <p>By living a healthy lifestyle, you can help keep your blood pressure, cholesterol, and blood sugar levels
+        normal and lower your risk for heart disease and heart attack.</p>
+      <p>The various methods include:</p>
+      <ul>
+        <li>
+          <div class="Causes2">
+            <h3>Don't smoke or use tobacco</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3> Get moving: Aim for at least 30 to 60 minutes of activity daily</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3>Eat a heart-healthy diet</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3> Maintain a healthy weight</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3>Get quality sleep</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3>Manage stress</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3>Get regular health screening tests</h3>
+          </div>
+        </li>
+        <li>
+          <div class="Causes2">
+            <h3>Take steps to prevent infections</h3>
+          </div>
+        </li>
+      </ul>
+      <p>For Detailed Information:</p>
+      <a href="https://www.mayoclinic.org/diseases-conditions/heart-disease/in-depth/heart-disease-prevention/art-20046502" >Click Here</a>
+    </div>
+    <button class="showFormBtn" id="showFormBtn">Check for Heart Attack</button>
+    <div id="formContainer" style="display:none;">
+      <form method="post" action="/predict">
+        <div>
+          <label for="age">Age:</label>
+          <input type="text" id="age" name="age">
+        </div>
+        <div>
+          <label for="sex">Sex (0 for female, 1 for male):</label>
+          <input type="text" id="sex" name="sex">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email">
+        </div>
+        <div>
+          <label for="cholesterol">Cholesterol:</label>
+          <input type="text" id="cholesterol" name="cholesterol">
+        </div>
+        <div>
+          <label for="heart_rate">Heart Rate:</label>
+          <input type="text" id="heart_rate" name="heart_rate">
+        </div>
+        <div>
+          <label for="high_bp">High Blood Pressure (Systolic):</label>
+          <input type="text" id="high_bp" name="high_bp">
+        </div>
+        <div>
+          <label for="low_bp">Low Blood Pressure (Diastolic):</label>
+          <input type="text" id="low_bp" name="low_bp">
+        </div>
+        <div>
+          <label for="diabetes">Diabetes (0 for no, 1 for yes):</label>
+          <input type="text" id="diabetes" name="diabetes">
+        </div>
+        <div>
+          <label for="smoking">Smoking (0 for no, 1 for yes):</label>
+          <input type="text" id="smoking" name="smoking">
+        </div>
+        <div>
+          <label for="obesity">Obesity:</label>
+          <input type="text" id="obesity" name="obesity">
+        </div>
+        <div>
+          <label for="alc">Alcohol Consumption (0 for no, 1 for yes):</label>
+          <input type="text" id="alc" name="alc">
+        </div>
+        <div>
+          <label for="exc">Exercise Hours Per Week:</label>
+          <input type="text" id="exc" name="exc">
+        </div>
+        <div>
+          <label for="pre">Previous Heart Problems (0 for no, 1 for yes):</label>
+          <input type="text" id="pre" name="pre">
+        </div>
+        <div>
+          <label for="bmi">BMI:</label>
+          <input type="text" id="bmi" name="bmi">
+        </div>
+        <div>
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country">
+        </div>
+        <div id="geolocation">
+          <label for="latitude">Latitude:</label>
+          <input type="text" id="latitude" name="latitude" readonly>
+          <label for="longitude">Longitude:</label>
+          <input type="text" id="longitude" name="longitude" readonly>
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city">
+        </div>
+        <div>
+          <label for="manual_city">Enter City Manually:</label>
+          <input type="text" id="manual_city" name="manual_city">
+        </div>
+
+        <button type="submit">Predict</button>
+      </form>
+    </div>
+    <div class="appointment-container">
+      <h2>Book an Appointment</h2>
       <div>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
+        <p>phc@iitj.ac.in</p>
       </div>
       <div>
-        <label for="cholesterol">Cholesterol:</label>
-        <input type="text" id="cholesterol" name="cholesterol">
+        <label for="phone">Phone No.:</label>
+        <p>84321*****</p>
       </div>
-      <div>
-        <label for="heart_rate">Heart Rate:</label>
-        <input type="text" id="heart_rate" name="heart_rate">
-      </div>
-      <div>
-        <label for="high_bp">High Blood Pressure (Systolic):</label>
-        <input type="text" id="high_bp" name="high_bp">
-      </div>
-      <div>
-        <label for="low_bp">Low Blood Pressure (Diastolic):</label>
-        <input type="text" id="low_bp" name="low_bp">
-      </div>
-      <div>
-        <label for="diabetes">Diabetes (0 for no, 1 for yes):</label>
-        <input type="text" id="diabetes" name="diabetes">
-      </div>
-      <div>
-        <label for="smoking">Smoking (0 for no, 1 for yes):</label>
-        <input type="text" id="smoking" name="smoking">
-      </div>
-      <div>
-        <label for="obesity">Obesity:</label>
-        <input type="text" id="obesity" name="obesity">
-      </div>
-      <div>
-        <label for="alc">Alcohol Consumption (0 for no, 1 for yes):</label>
-        <input type="text" id="alc" name="alc">
-      </div>
-      <div>
-        <label for="exc">Exercise Hours Per Week:</label>
-        <input type="text" id="exc" name="exc">
-      </div>
-      <div>
-        <label for="pre">Previous Heart Problems (0 for no, 1 for yes):</label>
-        <input type="text" id="pre" name="pre">
-      </div>
-      <div>
-        <label for="bmi">BMI:</label>
-        <input type="text" id="bmi" name="bmi">
-      </div>
-      <div>
-        <label for="country">Country:</label>
-        <input type="text" id="country" name="country">
-      </div>
-      <div>
-        <label for="ayt">Average Yearly Temperature (Celsius):</label>
-        <input type="text" id="ayt" name="ayt">
-      </div>
-      <div id="geolocation">
-        <label for="latitude">Latitude:</label>
-        <input type="text" id="latitude" name="latitude" readonly>
-        <label for="longitude">Longitude:</label>
-        <input type="text" id="longitude" name="longitude" readonly>
-        <label for="city">City:</label>
-        <input type="text" id="city" name="city">
-      </div>
+    </div>
 
-      <!-- Manual city input field -->
-      <div>
-        <label for="manual_city">Enter City Manually:</label>
-        <input type="text" id="manual_city" name="manual_city">
+    <!-- Footer with Team Members -->
+    <footer class="footer">
+      <h2>Our Team</h2>
+      <div class="team-member">
+        <img src="Vaibhav.jpg" alt="Team Member 1">
+        <p>Vaibhav Gupta</p>
       </div>
-      
-      <button type="submit">Predict</button>
-    </form>
+      <div class="team-member">
+        <img src="ARR.jpg" alt="Team Member 2">
+        <p>Ambati Rahul Reddy</p>
+      </div>
+    </footer>
   </div>
 
   <script>
@@ -306,6 +237,11 @@
         })
         .catch(error => console.error('Error:', error));
     }
+    document.getElementById('showFormBtn').addEventListener('click', function () {
+      document.getElementById('formContainer').style.display = 'block';
+    });
+
   </script>
 </body>
+
 </html>

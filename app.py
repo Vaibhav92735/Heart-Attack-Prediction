@@ -117,7 +117,6 @@ def predict():
         pre = float(request.form.get('pre'))
         bmi = float(request.form.get('bmi'))
         country = str(request.form.get('country'))
-        ayt = float(request.form.get('ayt'))
         
         # Retrieve city name
         city = request.form.get('manual_city') or request.form.get('city')
