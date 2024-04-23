@@ -176,6 +176,37 @@ button[type="submit"]:hover {
   line-height: 1.6;
 }
 
+.bibliogrphy-container {
+  margin-bottom: 20px;
+  margin-bottom: 20px;
+  max-width: 70%;
+  margin: auto;
+}
+
+.bibliogrphy-container h2 {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.bibliogrphy-container p {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.bibliogrphy-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.bibliogrphy-container li {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
 .Causes2 {
   margin-bottom: 20px;
   margin-bottom: 20px;
@@ -236,38 +267,94 @@ button[type="submit"]:hover {
   margin-right: 50px;
 }
 
-.footer {
-  margin-top: 50px;
-  background-color: #666;
-  /* max-width: 60%; */
-  margin: auto;
+footer {
+  background-color: #f9f9f9;
+  padding: 50px 0;
 }
 
-.footer h2 {
-  font-size: 1.5em;
-  color: white;
-  margin-bottom: 20px;
+.team-section {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .team-member {
   display: inline-block;
-  text-align: center;
-  /* margin-right: 20px; */
-  color: #fff;
-  max-width: 60%;
-  margin: auto;
+  margin: 0 20px;
 }
 
 .team-member img {
   width: 150px;
-  height: 150px;
   border-radius: 50%;
+  height: 150px;
+}
+
+.footer-details {
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-details p {
+  margin: 5px 0;
+}
+
+.res-container {
+  max-width: 70%;
   margin: auto;
+  background-color: #eaf6ff; /* Light blue background color */
+  padding: 20px; /* Add padding */
+  border-radius: 8px; /* Add border radius */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.res-container h2 {
+  color: #333;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
-.team-member p {
-  font-size: 1.1em;
-  font-weight: bold;
-  margin: auto;
+.res-container p {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.res-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.res-container li {
+  color: #666;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.result {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.message {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-left: 400px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
 }

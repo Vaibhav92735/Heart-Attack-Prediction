@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <h1>Heart Attack Risk Prediction</h1>
+    <h1 style="text-align: center; color: #397abc; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Heart Attack Risk Prediction</h1>
     <div class="Overview">
       <h2>Heart Attack</h2>
       <p>A heart attack occurs when an artery that sends blood and oxygen to the heart is blocked. Fatty,
@@ -197,16 +197,39 @@
       </div>
     </div>
 
-    <!-- Footer with Team Members -->
-    <footer class="footer">
-      <h2>Our Team</h2>
-      <div class="team-member">
-        <img src="Vaibhav.jpg" alt="Team Member 1">
-        <p>Vaibhav Gupta</p>
+    <div id="bibliogrphy-container" class="bibliogrphy-container">
+      <h2>Bibliography</h2>
+      <ul>
+        <li><a
+            href="https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset?resource=download">Kaggle</a>
+        </li>
+        <li><a
+            href="https://www.mayoclinic.org/diseases-conditions/heart-disease/in-depth/heart-disease-prevention/art-20046502">
+            Mayoclinic</a>
+        </li>
+        <li><a href="www.cdc.gov/chronicdisease/resources/publications/factsheets/heart-disease-stroke.htm#:~:text=The%20Nation's%20Risk%20Factors%20and,unhealthy%20diet%2C%20and%20physical%20inactivity.">
+          Centers for Disease Control and Prevention</a></li>
+      </ul>
+    </div>
+
+    <footer>
+      <div class="team-section">
+        <h2>Our Team- Group 9</h2>
+        <div class="team-member">
+          <img src="{{ url_for('static', filename = 'images/Vaibhav.jpg')}}" alt="Team Member 1">
+          <h3>Vaibhav Gupta</h3>
+          <p>B22CS058</p>
+        </div>
+        <div class="team-member">
+          <img src="{{ url_for('static', filename = 'images/ARR.jpg')}}" alt="Team Member 2">
+          <h3>Ambati Rahul Reddy</h3>
+          <p>B22CS088</p>
+        </div>
       </div>
-      <div class="team-member">
-        <img src="ARR.jpg" alt="Team Member 2">
-        <p>Ambati Rahul Reddy</p>
+      
+      <div class="footer-details">
+        <p><a href="report.pdf" target="_blank">Mid-term Report</a></p>
+        <p><a href="report_final3.pdf" target="_blank">Final Report</a></p>
       </div>
     </footer>
   </div>
