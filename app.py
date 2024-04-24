@@ -46,21 +46,42 @@ def index():
 def predict():
     if request.method == 'POST':
         # Retrieve form field values
-        age = float(request.form.get('age'))
-        sex = float(request.form.get('sex'))
-        cholesterol = float(request.form.get('cholesterol'))
-        heart_rate = float(request.form.get('heart_rate'))
-        high_bp = float(request.form.get('high_bp'))
-        low_bp = float(request.form.get('low_bp'))
-        diabetes = float(request.form.get('diabetes')) if request.form.get('diabetes') is not None else 0.0
-        smoking = float(request.form.get('smoking'))
-        obesity = float(request.form.get('obesity'))
-        alc = float(request.form.get('alc'))
-        exc = float(request.form.get('exc'))
-        pre = float(request.form.get('pre'))
-        bmi = float(request.form.get('bmi'))
-        country = str(request.form.get('country'))
+        age = request.form.get('age')
+        sex = request.form.get('sex')
+        cholesterol = request.form.get('cholesterol')
+        heart_rate = request.form.get('heart_rate')
+        high_bp = request.form.get('high_bp')
+        low_bp = request.form.get('low_bp')
+        diabetes = request.form.get('diabetes')
+        smoking = request.form.get('smoking')
+        obesity = request.form.get('obesity')
+        alc = request.form.get('alc')
+        exc = request.form.get('exc')
+        pre = request.form.get('pre')
+        bmi = request.form.get('bmi')
+        country = request.form.get('country')
         
+        # Check if any of the values are missing
+        if any(value is None or value == '' for value in [age, sex, cholesterol, heart_rate, high_bp, low_bp, diabetes, smoking, obesity, alc, exc, pre, bmi, country]):
+            return render_template('index2.html', popup=True)  # Render the template with a flag for showing the popup
+        
+        # Convert values to float where necessary
+        age = float(age)
+        sex = float(sex)
+        cholesterol = float(cholesterol)
+        heart_rate = float(heart_rate)
+        high_bp = float(high_bp)
+        low_bp = float(low_bp)
+        diabetes = float(diabetes) if diabetes is not None else 0.0
+        smoking = float(smoking)
+        obesity = float(obesity)
+        alc = float(alc)
+        exc = float(exc)
+        pre = float(pre)
+        bmi = float(bmi)
+
+        if((sex!=0 and sex!=1)or(diabetes!=0 and diabetes!=1)or(obesity!=0 and obesity!=1)or(smoking!=0 and smoking!=1)):
+            return render_template('index2.html', popup=True)
         # Retrieve city name
         city = request.form.get('manual_city') or request.form.get('city')
 

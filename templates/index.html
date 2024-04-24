@@ -11,7 +11,9 @@
 
 <body>
   <div class="container">
-    <h1 style="text-align: center; color: #397abc; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Heart Attack Risk Prediction</h1>
+    <h1
+      style="text-align: center; color: #397abc; font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+      Heart Attack Risk Prediction</h1>
     <div class="Overview">
       <h2>Heart Attack</h2>
       <p>A heart attack occurs when an artery that sends blood and oxygen to the heart is blocked. Fatty,
@@ -20,6 +22,19 @@
         attack, a lack of blood flow causes the tissue in the heart muscle to die.
         A heart attack is also called a myocardial infarction.</p>
     </div>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <p>Please fill in all the fields before submitting.</p>
+      </div>
+    </div>
+
+    <script>
+      function closePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+    </script>
 
     <div class="image">
       <img
@@ -104,7 +119,9 @@
         </li>
       </ul>
       <p>For Detailed Information:</p>
-      <a href="https://www.mayoclinic.org/diseases-conditions/heart-disease/in-depth/heart-disease-prevention/art-20046502" >Click Here</a>
+      <a
+        href="https://www.mayoclinic.org/diseases-conditions/heart-disease/in-depth/heart-disease-prevention/art-20046502">Click
+        Here</a>
     </div>
     <button class="showFormBtn" id="showFormBtn">Check for Heart Attack</button>
     <div id="formContainer" style="display:none;">
@@ -207,8 +224,9 @@
             href="https://www.mayoclinic.org/diseases-conditions/heart-disease/in-depth/heart-disease-prevention/art-20046502">
             Mayoclinic</a>
         </li>
-        <li><a href="www.cdc.gov/chronicdisease/resources/publications/factsheets/heart-disease-stroke.htm#:~:text=The%20Nation's%20Risk%20Factors%20and,unhealthy%20diet%2C%20and%20physical%20inactivity.">
-          Centers for Disease Control and Prevention</a></li>
+        <li><a
+            href="www.cdc.gov/chronicdisease/resources/publications/factsheets/heart-disease-stroke.htm#:~:text=The%20Nation's%20Risk%20Factors%20and,unhealthy%20diet%2C%20and%20physical%20inactivity.">
+            Centers for Disease Control and Prevention</a></li>
       </ul>
     </div>
 
@@ -226,10 +244,9 @@
           <p>B22CS088</p>
         </div>
       </div>
-      
+
       <div class="footer-details">
-        <p><a href="report.pdf" target="_blank">Mid-term Report</a></p>
-        <p><a href="report_final3.pdf" target="_blank">Final Report</a></p>
+        <h3><a href="report.pdf" target="_blank">Final Report</a></h3>
       </div>
     </footer>
   </div>
