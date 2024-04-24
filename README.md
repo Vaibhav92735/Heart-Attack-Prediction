@@ -10,3 +10,5 @@ This website contains mainly a main executable app.py.
 - Execute the code: pip install -r requirements.txt
 - The you can run it using the run button in VS Code and executing app.py or using terminal and execute the code: Python app.py
 - Then we are ready to use the website.
+
+It also contains the dataset and .ipynb file of model training which could be run on supported platforms.
